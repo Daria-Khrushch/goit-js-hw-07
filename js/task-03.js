@@ -17,8 +17,9 @@ const images = [
 ];
 
 images.forEach(function (image, index) {
-    const navEl = document.querySelector('ul');
-    console.log(navEl.insertAdjacentHTML('beforeend', `<li>
+  const navEl = document.querySelector('ul');
+  const listEl= `<li>
         <img src="${image.url}" alt="${image.alt}">
-      </li>`));
+      </li>`;
+  navEl.insertAdjacentHTML('beforeend', listEl);
 });
