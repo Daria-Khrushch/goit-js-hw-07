@@ -7,9 +7,10 @@ const ingredients = [
   'Приправы',
 ];
 
-ingredients.forEach(function (item, index) {
-    const listEl = document.createElement('li');
-    const navEl = document.querySelector('ul');
-    listEl.textContent = item;
+ingredients.map(function (item) {
+  const listEl = document.createElement('li');
+  listEl.textContent = item;
+  const navEl = document.querySelector('ul');
   navEl.append(listEl);
- });
+})
+

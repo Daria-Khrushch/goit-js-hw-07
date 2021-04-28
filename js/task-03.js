@@ -16,7 +16,7 @@ const images = [
   },
 ];
 
-images.forEach(function (image, index) {
+images.map(function (image, index) {
   const navEl = document.querySelector('ul');
   const listEl= `<li>
         <img src="${image.url}" alt="${image.alt}">
