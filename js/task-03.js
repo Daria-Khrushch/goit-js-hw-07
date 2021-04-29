@@ -15,11 +15,10 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
-images.map(function (image, index) {
-  const navEl = document.querySelector('ul');
-  const listEl= `<li>
-        <img src="${image.url}" alt="${image.alt}">
-      </li>`;
-  navEl.insertAdjacentHTML('beforeend', listEl);
-});
+const navEl = document.querySelector('ul');
+const listOfImages = createListOfItems(images);
+console.log(listOfImages);
+function createListOfItems(items) {
+  return items.map(item => `<li><img src="${item.url}" alt="${item.alt}"></li>`).join('');
+}
+navEl.insertAdjacentHTML('beforeend', listOfImages);
